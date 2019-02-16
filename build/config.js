@@ -1,8 +1,10 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
-  entry: './entry.js',
+  mode: 'development',
+  entry: './index.js',
   devServer: {
     port: 8123,
-    contentBase: './html',
     watchContentBase: true
   },
   module: {
@@ -12,7 +14,7 @@ module.exports = {
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
-      },s
+      },
     },
     {
       test: /\.scss$/,
@@ -25,4 +27,9 @@ module.exports = {
     },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'html/index.html'
+    })
+  ]
 };
