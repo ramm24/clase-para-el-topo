@@ -1,0 +1,8 @@
+{
+  "presets": [["env", {
+      "targets": {
+          "browsers": [">1%", "ie 11", "last 2 edge version", "not op_mini all"]
+      }, 
+      "debug": true
+      }]]
+}
